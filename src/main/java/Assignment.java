@@ -11,7 +11,6 @@ public class Assignment {
       System.out.println(repeated);
       String pyramid = createPyramid(0);
       String FizzBuzz = countTo(3);
-      
     }
     
     /**
@@ -20,15 +19,27 @@ public class Assignment {
      * Example: word="hello" times=3 → "hello hello hello"
      */
     public static String repeatWord(String word, int times) {
-       
         // TODO: Implement this method
         // Use a while loop to build a string that repeats the word
         // Words should be separated by single spaces
         // No trailing space at the end
-        return "test";
 
-    
-    }
+        System.out.println("This is the word: " + word);
+        while (true) {
+            
+            if (times > 0) {
+                System.out.println(repeatWord(word, times));
+                }
+            else {
+                return "" ;
+                }
+        }
+            
+        
+        
+        
+        }
+
     
     /**
      * Exercise 2: Number Pyramid
