@@ -28,19 +28,13 @@ public class Assignment {
         int amountCounter = 0;
         String output = "";
 
-        if (times <= 0){
-            return "";
-            }
-
         while (amountCounter < times) {
             amountCounter = amountCounter + 1;
-
-            if (amountCounter == times) { // Skips the addition so it can add the word without the space, then finally return it
-                output = output + (word);
-                return (output);
-                }
-
             output = output + (word + " ");
+
+            if (amountCounter == times) { // Breaks the loop and returns the output. .trim() removes any trailing spaces in the string
+                return (output.trim());
+                }
             }
 
         return "";
@@ -66,16 +60,12 @@ public class Assignment {
         int amountCounter = 0;
         String pyramid = "";
 
-        if (maxNumber <= 0) { // Edgecase for if max number is 0, then it returns nothing
-            return "";
-            }
-
         while (amountCounter < maxNumber) {
-            amountCounter = amountCounter + 1;
-            String number = Integer.toString(amountCounter); 
+            amountCounter = amountCounter + 1; 
+            String number = Integer.toString(amountCounter); // Makes a copy of amount counter, but as a string
             pyramid = pyramid + ("\n" + number.repeat(amountCounter));
 
-            if (amountCounter == maxNumber) { //Stops the loop when 
+            if (amountCounter == maxNumber) { //Stops the loop when , and returns the output
                 return pyramid;
                 }   
         }
