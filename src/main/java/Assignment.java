@@ -1,4 +1,5 @@
 
+import java.lang.invoke.VarHandle.AccessMode;
 import java.util.Scanner;
 
 public class Assignment {
@@ -23,24 +24,30 @@ public class Assignment {
         // Use a while loop to build a string that repeats the word
         // Words should be separated by single spaces
         // No trailing space at the end
+        
+        int amountCounter = 0;
+        String output = "";
 
-        System.out.println("This is the word: " + word);
-        while (true) {
-            
-            if (times > 0) {
-                System.out.println(repeatWord(word, times));
-                }
-            else {
-                return "" ;
-                }
-        }
-            
-        
-        
-        
-        }
+        if (times == 0){
+            return "";
+            }
 
-    
+        while (amountCounter < times) {
+            amountCounter = amountCounter + 1;
+
+            if (amountCounter == times) { // Skips the addition so it can add the word without the space, then finally return it
+                output = output + (word);
+                return (output);
+                }
+
+            output = output + (word + " ");
+            }
+
+        return "";
+        }
+        
+
+         
     /**
      * Exercise 2: Number Pyramid
      * Create a string pyramid of numbers from 1 to maxNumber
@@ -55,7 +62,19 @@ public class Assignment {
         // - Outer loop for each row
         // - Inner loop to repeat the number
         // Use \n for newlines
-        return "";
+
+        int amountCounter = 0;
+        String[] pyramid = {};
+
+        while (amountCounter < maxNumber) {
+            amountCounter = amountCounter + 1;
+
+        }
+
+
+
+
+        return " Ignore this #2";
     }
     
  
@@ -75,7 +94,7 @@ public class Assignment {
         // Use string concatenation
         // Numbers/words should be separated by spaces
         // No trailing space at the end
-        return "";
+        return " Ignore this #3";
     }
     
   
