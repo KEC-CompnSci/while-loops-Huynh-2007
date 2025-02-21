@@ -28,7 +28,7 @@ public class Assignment {
         int amountCounter = 0;
         String output = "";
 
-        if (times == 0){
+        if (times <= 0){
             return "";
             }
 
@@ -64,17 +64,22 @@ public class Assignment {
         // Use \n for newlines
 
         int amountCounter = 0;
-        String[] pyramid = {};
+        String pyramid = "";
+
+        if (maxNumber <= 0) { // Edgecase for if max number is 0, then it returns nothing
+            return "";
+            }
 
         while (amountCounter < maxNumber) {
             amountCounter = amountCounter + 1;
+            String number = Integer.toString(amountCounter); 
+            pyramid = pyramid + ("\n" + number.repeat(amountCounter));
 
+            if (amountCounter == maxNumber) { //Stops the loop when 
+                return pyramid;
+                }   
         }
-
-
-
-
-        return " Ignore this #2";
+        return "";
     }
     
  
