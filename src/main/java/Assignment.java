@@ -89,8 +89,34 @@ public class Assignment {
         // Use string concatenation
         // Numbers/words should be separated by spaces
         // No trailing space at the end
-        return " Ignore this #3";
+
+        int amountCounter = 0;
+        String number = Integer.toString(amountCounter); // Makes a copy of amount counter, but as a string
+        String countingGame = "";
+
+        while (amountCounter < maxNumber) {
+            amountCounter = amountCounter + 1;
+            number = Integer.toString(amountCounter); 
+
+            if (amountCounter % 3 == 0 && amountCounter % 15 != 0) {
+                countingGame = countingGame + "Fizz ";
+                }
+            if (amountCounter % 5 == 0 && amountCounter % 15 != 0) {
+                countingGame = countingGame + "Buzz ";
+                }
+                
+            if (amountCounter % 15 == 0) {
+                countingGame = countingGame + "FizzBuzz ";
+                }
+
+            if (amountCounter % 3 != 0 && amountCounter % 5 != 0){
+                countingGame = countingGame + (number + " ");
+                }
+
+            if (amountCounter == maxNumber) {
+                return(countingGame.trim());
+                }
+        }
+       return "";
     }
-    
-  
 }
